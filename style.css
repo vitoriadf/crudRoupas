@@ -1,0 +1,23 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+.corDFundo{
+    background-color: #71276f
+}
+#cardW{
+    max-width: 480px;
+}
+#configCard{
+    border-color: #5a1e56;
+    border-radius: 1rem;
+    background-color: #43143d;
+    box-shadow: 2px 4px 7px 4px #5a1e56
+}
+.divsInputs{
+    min-height: 66px;
+}
+
+li {
+    margin: 1px;
+    color: white;
+}
