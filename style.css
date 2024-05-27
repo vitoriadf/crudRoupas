@@ -21,3 +21,10 @@ li {
     margin: 1px;
     color: white;
 }
+.conteudoInputSucesso{
+    color: rgb(0, 255, 0);
+}
+
+.conteudoInputError{
+    color: rgb(255, 0, 0)
+}
