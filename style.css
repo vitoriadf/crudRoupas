@@ -2,7 +2,7 @@
     font-family: "Poppins", sans-serif;
 }
 .corDFundo{
-    background-color: #71276f
+    background-color: #71276f;
 }
 #cardW{
     max-width: 480px;
@@ -26,5 +26,23 @@ li {
 }
 
 .conteudoInputError{
-    color: rgb(255, 0, 0)
+    color: rgb(255, 0, 0);
+    
+}
+
+.borda {
+    border: 1px solid #eaeaea;
+}
+
+.corNome {
+    color: #71276f;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.corMarca {
+    color: #71276f;
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 30px;
 }

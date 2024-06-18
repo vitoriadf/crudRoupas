@@ -1,0 +1,52 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+li {
+  margin: 6px !important;
+  color: rgb(163, 4, 4) !important;
+}
+.container {
+    margin-top: 50px;
+  }
+
+  .titulo{
+    color: #71276f;
+    margin-top: 20px;
+}
+
+.bordaTabela{
+    border: 1px solid #71276f !important;
+  }
+
+  .cabecalhoTabela{
+    background-color: #71276f !important;
+  }
+ .botaoCadastrar{
+    margin-top: 30px;
+  }
+
+  #larguraMain{
+    width: 600px;
+  }
+
+  .formContainer{
+    max-width: 600px;
+  }
+
+  .corTitulo{
+    color:#43143d;
+  }
+
+  #botao{
+    background-color: #43143d;
+  }
+  .margin{
+    margin-left: 100px;
+  }
+  .tituloRelatorio{
+    margin-left: 30px;
+  }
+  .tituloHome{
+    color: #71276f;
+    margin-top: 50px;
+  }
