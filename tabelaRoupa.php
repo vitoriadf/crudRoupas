@@ -60,68 +60,73 @@ $produtos = $result->fetchAll(PDO::FETCH_ASSOC);
         <div class="row mt-5">
             <div>
                 <?php
-        if (count($produtos) > 0) {
-        ?>
-                <div class=" table-responsive">
-                    <table class="table table-responsive bordaTabela">
-                        <thead>
-                            <tr>
-                                <th class="text-white cabecalhoTabela">Id</th>
-                                <th class="text-white cabecalhoTabela">Nome</th>
-                                <th class="text-white cabecalhoTabela">Cor</th>
-                                <th class="text-white cabecalhoTabela">Material</th>
-                                <th class="text-white cabecalhoTabela">Categoria</th>
-                                <th class="text-white cabecalhoTabela">Preço</th>
-                                <th class="text-white cabecalhoTabela">Quantidade</th>
-                                <th class="text-white cabecalhoTabela">Ações</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-              foreach ($produtos as $produto) {
-                echo "<tr>";
-                echo "<td>" . $produto['id'] . "</td>";
-                echo "<td>" . $produto['nome'] . "</td>";
-                echo "<td>" . $produto['cor'] . "</td>";
-                echo "<td>" . $produto['material'] . "</td>";
-                echo "<td>" . $produto['categoria_nome'] . "</td>";
-                echo "<td>" . $produto['preco'] . "</td>";
-                echo "<td>" . $produto['quantidade'] . "</td>";
-                echo "<td>
-                <div class='d-flex'>
-                  <form method='POST' action='verificar/delete.php'>
-                    <input name='id' type='hidden' value='" . $produto['id'] . "'>
-                    <input name='nome' type='hidden' value='" . $produto['nome'] . "'>
-                    <button class='btn border-danger text-danger me-2' type='button' data-bs-toggle='modal' data-bs-target='#confirmModal" . $produto['id'] . "'>Excluir</button>
-                    
-                    <div class='modal fade ' id='confirmModal" . $produto['id'] . "' tabindex='-1' aria-labelledby='confirmModalLabel" . $produto['id'] . "' aria-hidden='true'>
-                      <div class='modal-dialog modal-dialog-centered'>
-                        <div class='modal-content'>
-                          <div class='modal-header'>
-                            <h5 class='modal-title' id='confirmModalLabel" . $produto['id'] . "'>Confirmação</h5>
-                            <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
-                          </div>
-                          <div class='modal-body'>
-                            Tem certeza de que deseja excluir o produto '" . $produto['nome'] . "'?
-                          </div>
-                          <div class='modal-footer'>
-                            <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
-                            <button name='confirmDelete' type='submit' class='btn btn-danger'  data-bs-dismiss='modal'>Excluir</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                 <form action='formUpdate.php' method='GET'>
-                  <button type='submit' class='btn border-primary text-primary' name='atualizar'>Atualizar</button>
-                  <input name='id' type='hidden' value='" . $produto['id']. "'>
-                  <input name='nome' type='hidden' value='".$produto['nome']."'>
-                </form>
-                </td>"?>
-                        </tbody>
+                if (count($produtos) > 0) {
+                  ?>
+                  <div class="table-responsive ">
+                    <table class="table bordaTabela">
+                      <thead>  
+                        <tr>
+                          <th class="text-white cabecalhoTabela">Id</th>
+                          <th class="text-white cabecalhoTabela">Nome</th>
+                          <th class="text-white cabecalhoTabela">Cor</th>
+                          <th class="text-white cabecalhoTabela" >Material</th>
+                          <th class="text-white cabecalhoTabela">Categoria</th>
+                          <th class="text-white cabecalhoTabela" >Preço</th>
+                          <th class="text-white cabecalhoTabela">Quantidade</th>
+                          <th class="text-white cabecalhoTabela">Ações</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php
+                        foreach ($produtos as $produto) {
+                          echo "<tr>";
+                          echo "<td>" . $produto['id'] . "</td>";
+                          echo "<td>" . $produto['nome'] . "</td>";
+                          echo "<td>" . $produto['cor'] . "</td>";
+                          echo "<td>" . $produto['material'] . "</td>";
+                          echo "<td>" . $produto['categoria_nome'] . "</td>";
+                          echo "<td>" . $produto['preco'] . "</td>";
+                          echo "<td>" . $produto['quantidade'] . "</td>";
+                          echo "<td>
+                          <div class='d-flex'>
+                            <form method='POST' action='verificar/delete.php'>
+                              <input name='id' type='hidden' value='" . $produto['id'] . "'>
+                              <input name='nome' type='hidden' value='" . $produto['nome'] . "'>
+                              <button class='btn border-danger text-danger me-2' type='button' data-bs-toggle='modal' data-bs-target='#confirmModal" . $produto['id'] . "'>Excluir</button>
+                              
+                              <div class='modal fade ' id='confirmModal" . $produto['id'] . "' tabindex='-1' aria-labelledby='confirmModalLabel" . $produto['id'] . "' aria-hidden='true'>
+                                <div class='modal-dialog modal-dialog-centered'>
+                                  <div class='modal-content'>
+                                    <div class='modal-header'>
+                                      <h5 class='modal-title' id='confirmModalLabel" . $produto['id'] . "'>Confirmação</h5>
+                                      <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
+                                    </div>
+                                    <div class='modal-body'>
+                                      Tem certeza de que deseja excluir o produto \"" . $produto['nome'] . "\"?
+                                    </div>
+                                    <div class='modal-footer'>
+                                      <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
+                                      <button name='confirmDelete' type='submit' class='btn btn-danger'  data-bs-dismiss='modal'>Excluir</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                           <form action='formUpdate.php' method='GET'>
+                          <button type='submit' class='btn border-primary text-primary' name='atualizar'>Atualizar</button>
+                          <input name='id' type='hidden' value='" . $produto['id']. "'>
+                          <input name='nome' type='hidden' value='".$produto['nome']."'>
+                          </form>
+          
+                             
+                          </td>"; 
+                        }
+                        ?>
+                      </tbody>
                     </table>
-                </div>
-                <?php }} else {
+                  </div>
+          
+                <?php } else {
           echo '<h1>Nenhum produto cadastrado!</h1>';
         }
         ?>
