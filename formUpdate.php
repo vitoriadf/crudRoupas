@@ -66,8 +66,8 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
          <div class="col-md-6">
-                    <div class="form-floating">
-                        <select class="form-select" id="categoria" name="categoria" aria-label="Categoria"  required>
+         <div class="form-floating">
+                        <select class="form-select" id="categoria" name="categoria" aria-label="Categoria" required>
                             <option selected disabled>Selecione a Categoria</option>
                             <?php
                             
@@ -80,6 +80,7 @@ if (isset($_GET['id'])) {
                             $categorias = $result->fetchAll(PDO::FETCH_ASSOC);
                             
                             foreach ($categorias as $categoria) {
+                        
                                 echo "<option value=\"{$categoria['id']}\">{$categoria['nome']}</option>";
                             }
                             ?>
