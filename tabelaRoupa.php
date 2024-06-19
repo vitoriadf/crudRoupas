@@ -18,7 +18,7 @@ $produtos = $result->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Tabela</title>
     <link rel="stylesheet" href="tabelas.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -26,10 +26,7 @@ $produtos = $result->fetchAll(PDO::FETCH_ASSOC);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
    
-    <style>
-
-
-    </style>
+  
 </head>
 
 <body class="bg-body-tertiary h-100">
@@ -53,10 +50,15 @@ $produtos = $result->fetchAll(PDO::FETCH_ASSOC);
         <p class="text-center mb-3 text-success">Produto editado com sucesso!</p>
         <?php } ?>
 
-        <div class="d-flex  align-items-center justify-content-between">
-            <h2 class="titulo">Estoque</h2>
-            <a href="formCadastroProd" class="btn border-primary text-primary botaoCadastrar ">Cadastrar</a>
+        <div class="row align-items-center justify-content-between mb-3">
+            <div class="col">
+                <h2 class="titulo">Estoque</h2>
+            </div>
+            <div class="col-auto">
+                <a href="formCadastroProd" class="btn border-primary text-primary">Cadastrar</a>
+            </div>
         </div>
+
         <div class="row mt-5">
             <div>
                 <?php
@@ -98,11 +100,11 @@ $produtos = $result->fetchAll(PDO::FETCH_ASSOC);
                                 <div class='modal-dialog modal-dialog-centered'>
                                   <div class='modal-content'>
                                     <div class='modal-header'>
-                                      <h5 class='modal-title' id='confirmModalLabel" . $produto['id'] . "'>Confirmação</h5>
+                                      <h5 class='modal-title' id='confirmModalLabel" . $produto['id'] . "'>Excluir</h5>
                                       <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
                                     </div>
                                     <div class='modal-body'>
-                                      Tem certeza de que deseja excluir o produto \"" . $produto['nome'] . "\"?
+                                      Tem certeza de que deseja excluir o produto '" . $produto['nome'] . "'?
                                     </div>
                                     <div class='modal-footer'>
                                       <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>

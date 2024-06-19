@@ -23,7 +23,7 @@ $categorias = $result->fetchAll(PDO::FETCH_ASSOC);
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   
+
     <style>
     .container {
         margin-top: 50px;
@@ -61,11 +61,11 @@ $categorias = $result->fetchAll(PDO::FETCH_ASSOC);
     <div class="container">
 
         <?php if(isset($_GET['delete']) && $_GET['delete'] == 'excluido'){ ?>
-        <p class="text-center mb-3 text-danger">Produto excluido com sucesso!</p>
+        <p class="text-center mb-3 text-danger">categoria excluida com sucesso!</p>
         <?php } ?>
 
         <?php if(isset($_GET['success']) && $_GET['success'] == 'produtoCadastrado'){ ?>
-        <p class="text-center mb-3 text-success">Produto cadastrado com sucesso!</p>
+        <p class="text-center mb-3 text-success">categoria cadastrada com sucesso!</p>
         <?php } ?>
 
         <?php if(isset($_GET['danger']) && $_GET['danger'] == 'campoBranco'){ ?>
@@ -76,10 +76,15 @@ $categorias = $result->fetchAll(PDO::FETCH_ASSOC);
         <p class="text-center mb-3 text-success">Cadegoria editada com sucesso!</p>
         <?php } ?>
 
-        <div class="d-flex  align-items-center justify-content-between">
-            <h2 class="titulo">Categorias</h2>
-            <button type="button" class="btn border-primary text-primary botaoCadastrar" data-bs-toggle="modal"
-                data-bs-target="#cadastroModal">Cadastrar</button>
+        <div class="row align-items-center justify-content-between mb-3">
+            <div class="col">
+                <h2 class="titulo">Categoria</h2>
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn border-primary text-primary botaoCadastrar" data-bs-toggle="modal"
+                    data-bs-target="#cadastroModal">Cadastrar</button>
+            </div>
+
         </div>
         <div class="row mt-5 justify-content-center">
 
