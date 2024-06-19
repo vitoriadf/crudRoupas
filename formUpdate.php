@@ -79,9 +79,13 @@ if (isset($_GET['id'])) {
                             $result->execute();
                             $categorias = $result->fetchAll(PDO::FETCH_ASSOC);
                             
-                            foreach ($categorias as $categoria) {
-                        
-                                echo "<option value=\"{$categoria['id']}\">{$categoria['nome']}</option>";
+                    foreach ($categorias as $categoria) {
+                        if($categoria['id'] == $produtos['id_categoria']){
+                            echo "<option value=".$categoria['id']." selected>".$categoria['nome']."</option>";
+                        }else{
+                            echo "<option value=".$categoria['id'].">".$categoria['nome']."</option>";
+
+                        }
                             }
                             ?>
                         </select>

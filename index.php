@@ -22,7 +22,7 @@ if (!isset($_SESSION['id'])) {
 <body class="bg-body-tertiary h-100">
     <section>
         <div class="container">
-            <h1 class="titulo mb-5 tituloHome">Home</h1>
+            <h1 class="titulo mb-5 tituloHome">Inicio</h1>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <a href="tabelaRoupa.php" class="card-link text-decoration-none">
