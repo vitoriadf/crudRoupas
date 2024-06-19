@@ -21,9 +21,7 @@ li {
   .cabecalhoTabela{
     background-color: #71276f !important;
   }
- .botaoCadastrar{
-    margin-top: 30px;
-  }
+ 
 
   #larguraMain{
     width: 600px;
@@ -50,3 +48,4 @@ li {
     color: #71276f;
     margin-top: 50px;
   }
+  
