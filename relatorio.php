@@ -1,12 +1,12 @@
 <?php
 session_start();
 require 'conecao.php';
-require 'conecao.php';
+
 if (!isset($_SESSION['id'])) {
     header('Location: login.php');
 }
 
-$sql = "SELECT  ContIDCat, categorias  FROM trelatorio LIMIT 1";
+$sql = "SELECT  ContIDCat, categorias  FROM trelatorio LIMIT 2";
 $result = $conn->prepare($sql);
 $result->execute();
 $categoriaMaisCadast = $result->fetch(PDO::FETCH_ASSOC);
